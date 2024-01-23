@@ -27,7 +27,7 @@ VALUES
   ('Isabelle Harper','1-856-261-1364','in.nec@icloud.net','Ap #687-6498 Lorem Rd.','2062','auctor, nunc nulla vulputate dui, nec tempus mauris erat eget','1:01 PM','Apr 25, 2024','Lublin','Lorem ipsum dolor sit','88.0924384256, 53.3540608','http://netflix.com/sub?q=test','$83.92');
 
 
-  TheMockedDataTEam
+
 
 
 DROP TABLE IF EXISTS TheMockedDataTEam;
@@ -76,3 +76,47 @@ VALUES
   ('Audrey Winters','ligula@icloud.edu',94,'(0841) 36713422','admin'),
   ('Sawyer Mercer','a.tortor@yahoo.couk',25,'(09359) 3273173','manager'),
   ('Harding Cummings','orci.adipiscing.non@hotmail.com',6,'(06625) 9544165','manager')
+
+
+
+  CREATE TABLE TheMockedDataContacts (
+  id SERIAL PRIMARY KEY,
+  name varchar(255) default NULL,
+  email varchar(255) default NULL,
+  age  integer,
+  phone varchar(100) default NULL,
+  address varchar(100) default NULL,
+  city varchar(100) default NULL,
+  zipCode varchar(100) default NULL,
+)
+
+  INSERT INTO TheMockedDataContacts (name,email,age,phone,address,city,zipCode)
+VALUES
+   ('Jason Brock','felis.nulla.tempor@google.edu',7,'(037214) 591178','1892 Mauris St.','Canberra','13736'),
+  ('Shaeleigh Trevino','ipsum.nunc.id@hotmail.com',42,'(01808) 8679766','P.O. Box 168, 8926 Enim. Street','North-Eastern Islands','1214 XK'),
+  ('Britanni Kinney','lorem.lorem@protonmail.org',62,'(08555) 6334836','554-6138 Nunc Avenue','Uitenhage','2763'),
+  ('Jack Conrad','nunc@yahoo.net',8,'(039477) 120264','P.O. Box 428, 6866 Enim St.','Pekanbaru','46316'),
+  ('Larissa Richardson','donec@icloud.org',61,'(08784) 8656721','738-772 Placerat, Road','Hainan','YN57 5PY');
+
+
+CREATE TABLE mockBarData (
+    country VARCHAR(2),
+    hotdog INTEGER,
+    hot_dog_color VARCHAR(200),
+    burger INTEGER,
+    burgerColor VARCHAR(200),
+    kebab INTEGER,
+    kebabColor VARCHAR(200),
+    donut INTEGER,
+    donutColor VARCHAR(200)
+);
+
+INSERT INTO mockBarData (country,hot_dog,hot_dog_color,burger,burger_color,kebab,kebab_color,donut,donut_color)
+VALUES
+   ('AM',19,'hsl(229, 70%, 50%)',109,'hsl(296, 70%, 50%)',1,'hsl(97, 70%, 50%)',12,'hsl(340, 70%, 50%)'),
+  ('AL',149,'hsl(307, 70%, 50%)',81,'hsl(307, 70%, 50%)',13,'hsl(273, 70%, 50%)',42,'hsl(275, 70%, 50%)'),
+  ('AI',49,'hsl(72, 70%, 50%)',81,'hsl(96, 70%, 50%)',3,'hsl(106, 70%, 50%)',107,'hsl(256, 70%, 50%)'),
+  ('AG',33,'hsl(257, 70%, 50%)',149,'hsl(326, 70%, 50%)',38,'hsl(110, 70%, 50%)',56,'hsl(9, 70%, 50%)'),
+  ('AF',28,'hsl(190, 70%, 50%)',109,'hsl(325, 70%, 50%)',80,'hsl(54, 70%, 50%)',139,'hsl(285, 70%, 50%)'),
+   ('AE',28,'hsl(208, 70%, 50%)',109,'hsl(334, 70%, 50%)',80,'hsl(182, 70%, 50%)',139,'hsl(76, 70%, 50%)'),
+    ('AD',28,'hsl(87, 70%, 50%)',109,'hsl(141, 70%, 50%)',80,'hsl(224, 70%, 50%)',139,'hsl(274, 70%, 50%)');

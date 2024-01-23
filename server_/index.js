@@ -9,9 +9,31 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 
-app.get('/api/data', (req, res) => {
+app.get('/userDataApi', (req, res) => {
   db.getrandomdata().then(async(entry)=>{
+  res.json(entry);
+  })
+});
+
+app.get('/contactDataApi', (req, res) => {
+  db.getrandomcontactsdata().then(async(entry)=>{
+  res.json(entry);
+  })
+});
+app.get('/mockBarData', (req, res) => {
+  db.getrandommockbardata().then(async(entry)=>{
+  res.json(entry);
+  })
+});
+app.get('/mockLineData', (req, res) => {
+  db.getrandommocklinedata().then(async(entry)=>{
   console.log('entry', entry);
+  res.json(entry);
+  })
+});
+app.get('/mockpieData', (req, res) => {
+  db.getrandommockpiedata().then(async(entry)=>{
+  console.log('mockLineData_entry', entry);
   res.json(entry);
   })
 });

@@ -17,15 +17,15 @@ export const tokens = (mode) => ({
           900: "#141414",
         },
         primary: {
-          100: "#d0d1d5",
-          200: "#a1a4ab",
-          300: "#727681",
-          400: "#1F2A40",
-          500: "#141b2d",
-          600: "#101624",
-          700: "#0c101b",
-          800: "#080b12",
-          900: "#040509",
+          100: "#2c296e",
+          200: "#27255c",
+          300: "#242254",
+          400: "#23214a",
+          500: "#1f1d3d",
+          600: "#19182e",
+          700: "#151424",
+          800: "#0d0d1a",
+          900: "#08080f",
         },
         greenAccent: {
           100: "#dbf5ee",
@@ -210,5 +210,6 @@ export const useMode = () => {
   );
 
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+  
   return [theme, colorMode];
 };
