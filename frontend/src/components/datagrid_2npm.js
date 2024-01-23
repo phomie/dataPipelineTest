@@ -28,6 +28,7 @@ const Datagrid_2npm = () => {
       try {
         const response = await axiosInstance.get('/api/data');
         setChartData(response.data.rows);
+        console.log('response', response);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
