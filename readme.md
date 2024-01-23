@@ -8,8 +8,7 @@
 
 <!-- Project Image/Preview -->
 <p align="center">
-![Screenshot](screenshot.png)
-  
+  <img src="./frontend/public/screenshot.png" alt="Dashboard Preview" width="600">
 </p>
 
 <!-- Overview Section -->
